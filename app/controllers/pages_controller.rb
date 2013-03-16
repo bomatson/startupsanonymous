@@ -10,4 +10,8 @@ class PagesController < ApplicationController
 
   def resources
   end
+
+  def user
+  	@user ||= @current_user
+	end
 end

@@ -1,3 +1,4 @@
+require 'development_mail_interceptor'
 ActionMailer::Base.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
