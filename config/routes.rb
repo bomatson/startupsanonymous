@@ -1,4 +1,7 @@
 StartupsAnonymous::Application.routes.draw do
+  resources :users
+
+
   root to: 'pages#home'
 
   match '/help', to: 'pages#help'
