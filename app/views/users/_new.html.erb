@@ -1,0 +1,12 @@
+<%= form_for(User.new) do |f| %>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="large-10 columns">
+      <%= f.text_field :email, placeholder: "Enter your email here" %>
+      </div>
+      <div class="large-2 columns">
+      <%= f.submit :Submit, class: "button prefix" %>
+      </div>
+    </div>
+  </div>
+<% end %>
