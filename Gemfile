@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'mail'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
