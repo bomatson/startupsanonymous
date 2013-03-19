@@ -1,6 +1,5 @@
 StartupsAnonymous::Application.routes.draw do
-  resources :users
-
+  resources :users, only: [:create]
 
   root to: 'pages#home'
 
