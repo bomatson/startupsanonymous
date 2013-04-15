@@ -2,19 +2,13 @@
   <div class="row">
     <div class="large-12 columns">
       <div class="large-10 columns">
-      <%= f.text_field :email, placeholder: "Enter your email here" %>
+        <%= f.text_field :email, placeholder: "Enter your email here" %>
       </div>
       <div class="large-2 columns">
-      <%= f.submit :Submit, class: "button prefix" %>
+        <%= f.submit :Submit, class: "button prefix" %>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="large-4 columns">
-      <label for="checkbox3">
-        <%= f.check_box :anonymous, checked: true  %>
-        <span class="custom checkbox checked"></span> Anonymous
-      </label>
-    </div>
-  </div>
+    <%= f.check_box :anonymous %>
+        Anonymous
 <% end %>

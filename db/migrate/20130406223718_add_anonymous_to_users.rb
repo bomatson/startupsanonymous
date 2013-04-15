@@ -1,5 +1,9 @@
 class AddAnonymousToUsers < ActiveRecord::Migration
-  def change
-    add_column :users, :anonymous, :boolean
+  def up
+    add_column :users, :anonymous, :boolean, default: true, null: false
+  end
+
+  def down
+    remove_column :users, :anonymous, :boolean, default: nil
   end
 end
