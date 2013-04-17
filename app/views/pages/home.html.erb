@@ -26,40 +26,41 @@
   </div>
 </div>
 
-<div class="row background_grey sub">
+<%= render "mission" %>
+
+<%= image_tag('hands.png', class: 'hands') %>
+
+<div class="row sub">
   <div class="eight columns centered">
     <div class="row">
       <div class="twelve columns">
-        <h2 class=>Our Mission</h2>
-        <div class="mission">
-          <p>
-          We are here to lend a non-judgmental ear or mind to anyone going through the hard times. We can of course lend our experience to help you out, and would love to see people climb out of the pit, but we are also there for the "I don't even know what to ask/say" moments.
-          </p>
-
-          <p>
-          Most people will Fall. Sometimes, the Fall is so hard that people do not try again. We cannot change that, but we can try to make a small dent.  
-          </p>
-        </div>
+        <h2>How can I get a hold of you?</h2>
+    </div>
+    <div class="row" id="contact">
+      <div class="three columns first">
+        <h3>Email us</h3>
+        <%= image_tag('mail.png', class: 'mail', width: 60, height: 60) %>
+        <p>
+        If you use email below we will reply immediately
+        </p>
+      </div>
+      <div class="three columns second">
+        <h3>Burnr / Skype</h3>
+        <%= image_tag('skype.png', class: 'skype', width: 60, height: 60) %>
+        <p>
+        If you want to talk over phone, please email us and we can arrange a call on Burnr or Skype to protect your anonymity.
+        </p>
+      </div>
+      <div class="three columns third">
+        <h3>Coffee</h3>
+        <%= image_tag('coffee.png', class: 'little_coffee', width: 51, height: 63) %>
+        <p>
+        If you live in the Los Angeles area, and immediacy is not key, we will try to meet with anyone that really needs it.
+        </p>
+      </div>
+    </div>
+        <%= render partial: "/users/new" %>
       </div>
     </div>
   </div>
-</div>
-
-<div class="row">
-  <h2>How can I get a hold of you?</h2>
-  <p>
-
-  <p>
-  1. Email us - If you use email below we will reply immediately
-  </p>
-  <p>
-  2. Burner or Skype - If you want to talk over phone, please email us and we can arrange a call on Burnr or Skype to protect your anonymity.
-  </p>
-  <p>
-  3. Coffee - If you live in the Los Angeles area, and immediacy is not key, we will try to meet with anyone that really needs it.
-  </p>
-  If there is anyone of us you would prefer to speak to, please note that in your email.
-  </p>
-
-<%= render partial: "/users/new" %>
 </div>
