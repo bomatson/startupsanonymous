@@ -20,20 +20,37 @@ margin-left: 16.66667%;
 
 .columns.centered {
 	float: none;
-margin: 0 auto;
+	margin: 0 auto;
 }
+
 #orange{
 	background-color: #f99b68;
 }
 h1.pumpkins {
-	font-size: 79px;
+	font-size: 84px;
 	margin-bottom: 0;
-	padding-bottom: 0;
+	padding-bottom: 10px;
+	text-align:center;
+}
+
+.heading {
+	padding-bottom: 35px;
+}
+
+.heading p {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: lighter;
+
 }
 
 h2 {
 	font-size:26px;
 	padding-top: 25px;
+}
+.sub h2{
+	font-size: 47px;
+	text-align: center;
 }
 .first_text{
 	text-align: center;
@@ -88,8 +105,4 @@ div.background {
 	margin: 0 auto;
 	padding-left: 25%;
 }
-.para_2 {
-	font-size: 25px;
-	line-height: 28px;
-	font-weight: lighter;
-	margin-bottom: 0;
+
