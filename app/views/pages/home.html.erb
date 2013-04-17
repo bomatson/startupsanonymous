@@ -1,43 +1,54 @@
 <% provide(:title, 'Home') %>
 
-<div class="header_home">
-    <div class="first_text">
-      <h1 class="pumpkins"><span style="color:#fff">Startups Fail.</span> All the time.</h1>
+<div class="row" id="orange">
+  <div class="eight columns offset-by-two halo header_home">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="first_text">
+            <h1 class="pumpkins"><span style="color:#fff">Startups Fail.</span> All the time.</h1>
+        </div>
+        <div class="second_para">
+            Some "wind down" and others crash, burning the last people crazy enough to be on the rocket.
+            <p class="para_2">We in the tech world, logically, focus on the successes and the bets won. <span style="color:#000">Geniuses</span>. <span style="color:#000">Closers</span>. We are here for the others (in this current moment, because it is a long game after all), the negative space formed by Great Figures.
+            </p>  
+        </div>
+      </div>
     </div>
-    <div class="second_para">
-      Some "wind down" and others crash, burning the last people crazy enough to be on the rocket.
-      <p class="para_2">We in the tech world, logically, focus on the successes and the bets won. <span style="color:#000">Geniuses</span>. <span style="color:#000">Closers</span>. We are here for the others (in this current moment, because it is a long game after all), the negative space formed by Great Figures.
-      </p>  
-    </div>
+  </div>
 </div>
 
-  
-<br>
-<br>
-<br>
-<div class="background_white">
-  <h2 class="coffee">Sometimes a coffee can mean the world.</h2>
-    <div class="coffee_pic">
-    <%= image_tag('coffee-cup.png', class: 'coffee_pic') %>
+<div class="row">
+  <div class="eight columns centered">
+    <div class="row">
+      <div class="twelve columns">
+        <h2 class="coffee">Sometimes a coffee can mean the world.</h2>
+          <div class="coffee_pic">
+          <%= image_tag('coffee-cup.png', class: 'coffee_pic') %>
+          </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<div class="background_grey">
-  <h2>Our Mission</h2>
+<div class="row background_grey">
+  <div class="eight columns centered">
+    <div class="row">
+      <div class="twelve columns"
+        <h2>Our Mission</h2>
 
-  <p>
-  We are here to lend a non-judgmental ear or mind to anyone going through the hard times. We can of course lend our experience to help you out, and would love to see people climb out of the pit, but we are also there for the "I don't even know what to ask/say" moments.
-  </p>
+        <p>
+        We are here to lend a non-judgmental ear or mind to anyone going through the hard times. We can of course lend our experience to help you out, and would love to see people climb out of the pit, but we are also there for the "I don't even know what to ask/say" moments.
+        </p>
 
-  <p>
-  Most people will Fall. Sometimes, the Fall is so hard that people do not try again. We cannot change that, but we can try to make a small dent.  
-  </p>
+        <p>
+        Most people will Fall. Sometimes, the Fall is so hard that people do not try again. We cannot change that, but we can try to make a small dent.  
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-<br>
-<br>
-<br>
 
-
+<div class="row">
 
   <h2>Who We Are</h2>
 
@@ -59,29 +70,34 @@
 		<%= link_to("Bobby Matson (@bomatson)", "http://www.twitter.com/bomatson", target: "_blank") %>
     </p>
 	</div>
+</div>
 
-<h2>How we will help</h2>
-<p>
+<div class="row">
+  <h2>How we will help</h2>
+  <p>
 
-If you email or leave a comment, we will reach out and schedule a time to talk as soon as we can. We offer complete anonymity and will not ask anything that you do not wish to tell us.  
-</p>
+  If you email or leave a comment, we will reach out and schedule a time to talk as soon as we can. We offer complete anonymity and will not ask anything that you do not wish to tell us.  
+  </p>
 
-Immediacy and Privacy are our goals.
-</p>
+  Immediacy and Privacy are our goals.
+  </p>
+</div>
 
-<h2>How can I get a hold of you?</h2>
-<p>
+<div class="row">
+  <h2>How can I get a hold of you?</h2>
+  <p>
 
-<p>
-1. Email us - If you use email below we will reply immediately
-</p>
-<p>
-2. Burner or Skype - If you want to talk over phone, please email us and we can arrange a call on Burnr or Skype to protect your anonymity.
-</p>
-<p>
-3. Coffee - If you live in the Los Angeles area, and immediacy is not key, we will try to meet with anyone that really needs it.
-</p>
-If there is anyone of us you would prefer to speak to, please note that in your email.
-</p>
+  <p>
+  1. Email us - If you use email below we will reply immediately
+  </p>
+  <p>
+  2. Burner or Skype - If you want to talk over phone, please email us and we can arrange a call on Burnr or Skype to protect your anonymity.
+  </p>
+  <p>
+  3. Coffee - If you live in the Los Angeles area, and immediacy is not key, we will try to meet with anyone that really needs it.
+  </p>
+  If there is anyone of us you would prefer to speak to, please note that in your email.
+  </p>
 
 <%= render partial: "/users/new" %>
+</div>

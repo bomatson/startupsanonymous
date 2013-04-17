@@ -1,4 +1,30 @@
+.row {
+	width: 1920px;
+max-width: 100%;
+min-width: 768px;
+margin: 0 auto;
+}
 
+.row .row {
+	width: auto;
+max-width: none;
+min-width: 0;
+}
+
+.row .eight {
+width: 66.66667%;
+}
+.row .offset-by-two {
+margin-left: 16.66667%;
+}
+
+.columns.centered {
+	float: none;
+margin: 0 auto;
+}
+#orange{
+	background-color: orange;
+}
 h1.pumpkins {
 	font-size: 79px;
 	margin-bottom: 0;
