@@ -1,5 +1,5 @@
 .row {
-	width: 1920px;
+
 max-width: 100%;
 min-width: 768px;
 margin: 0 auto;
@@ -77,13 +77,10 @@ div.background {
 	background-color: #f99b68;
 	max-height: 345px;
 }
-.background_white{
-	background-color: #fff;
-	max-height: 330px;
-}
+
 .background_grey{
 	background-color: #f7f7f7;
-	max-height: 330px;
+
 }
 .top-bar {
 	margin-bottom:0;
@@ -95,7 +92,7 @@ div.background {
 }
 
 .coffee {
-	font-size: 50px;
+	font-size: 45px;
 	text-align: center;
 	padding-top: 65px;
 
@@ -103,6 +100,11 @@ div.background {
 
 .coffee_pic{
 	margin: 0 auto;
-	padding-left: 25%;
+	padding-left: 31%;
+	padding-bottom: 50px;
 }
 
+.mission {
+width: 85%;
+padding-left: 15%;
+}
