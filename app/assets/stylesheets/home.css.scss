@@ -1,0 +1,182 @@
+.row {
+
+  max-width: 100%;
+  min-width: 768px;
+  margin: 0 auto;
+}
+
+.row .row {
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+
+.row .eight {
+  width: 66.66667%;
+}
+.row .offset-by-two {
+  margin-left: 16.66667%;
+}
+
+.columns.centered {
+  float: none;
+  margin: 0 auto;
+}
+
+#contact .three {
+  width: 25%;
+  padding: 0;
+  border: 2px #ededed solid;
+  text-align:center;
+  margin-left: 6%;
+  margin-top: 25px;
+  -webkit-border-radius: 12px; 
+  -moz-border-radius: 12px; 
+  border-radius: 12px; 
+  min-height: 290px;
+  height: 100%;
+
+}
+
+#contact .columns.third {
+  margin-right: 5%;
+}
+
+#contact .three h3 {
+  background-color: #ededed;
+  margin: 0;
+  -webkit-border-radius: 12px 12px 0 0; 
+  -moz-border-radius: 12px 12px 0 0; 
+  border-radius: 12px 12px 0 0; 
+}
+
+#contact .three img {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#contact .three p {
+padding: 20px 20px 0 20px;
+}
+
+#orange{
+  background-color: #f99b68;
+}
+h1.pumpkins {
+  font-size: 75px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  text-align:center;
+}
+
+.heading {
+  padding-bottom: 35px;
+}
+
+.heading p {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: lighter;
+
+}
+
+h2 {
+
+  padding-top: 25px;
+}
+
+.sub h2{
+  font-size: 47px;
+  text-align: center;
+}
+.first_text{
+  text-align: center;
+}
+.second_text{
+  font-size: 23px;
+  font-weight: lighter;
+  padding-top: 20px;
+}
+
+.second_para{
+  color: #fff;
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 75px;
+}
+
+.top_of_header {
+  text-align: center;
+  padding: 13px 0;
+}
+
+div.background {
+  background-color: #f99b68;
+  max-height: 345px;
+}
+
+.background_grey{
+  background-color: #f7f7f7;
+
+}
+.top-bar {
+  margin-bottom:0;
+}
+
+.header_home {
+  text-align: left;
+  color: #000;
+}
+
+.coffee {
+  font-size: 45px;
+  text-align: center;
+  padding-top: 65px;
+
+}
+
+.coffee_pic{
+  margin: 0 auto;
+  padding-left: 31%;
+  padding-bottom: 50px;
+}
+
+.hands {
+  margin-top: -3%;
+  padding-left: 46%;
+}
+
+.mission {
+width: 85%;
+padding-left: 15%;
+margin-bottom: 100px;
+}
+
+#new_user {
+margin-top: 25px;
+margin-left: 3%;
+min-height: 120px;
+}
+
+#new_user input {
+  height: 50px;
+font-size: 24px;
+}
+
+#new_user input.button {
+  background-color: #faa577;
+  border-color: #f99b68;
+}
+
+#new_user input.button:hover {
+opacity: 0.85;
+}
+
+span.checkbox {
+  margin-left: 2%;
+}
+
+#emailing {
+  width: 98%;
+}
+
