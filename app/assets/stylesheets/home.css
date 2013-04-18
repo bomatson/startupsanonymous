@@ -24,17 +24,24 @@
 }
 
 #contact .three {
-	width: 30.3333%;
+	width: 25%;
 	padding: 0;
 	border: 2px #ededed solid;
 	text-align:center;
-	margin-left: 3%;
+	margin-left: 6%;
+	margin-top: 25px;
 	-webkit-border-radius: 12px; 
   -moz-border-radius: 12px; 
   border-radius: 12px; 
-	min-height: 300px;
+	min-height: 290px;
+	height: 100%;
 
 }
+
+#contact .columns.third {
+	margin-right: 5%;
+}
+
 #contact .three h3 {
 	background-color: #ededed;
 	margin: 0;
@@ -44,12 +51,12 @@
 }
 
 #contact .three img {
-padding-top: 25px;
-padding-bottom: 25px;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
 #contact .three p {
-padding: 25px;
+padding: 20px 20px 0 20px;
 }
 
 #orange{
@@ -145,7 +152,17 @@ padding-left: 15%;
 margin-bottom: 100px;
 }
 
-#contact .columns.first {
+#new_user {
+margin-top: 25px;
+margin-left: 3%;
+}
 
+#new_user input.button {
+	background-color: #faa577;
+	border-color: #f99b68;
+}
+
+#new_user input.button:hover {
+opacity: 0.85;
 }
 
