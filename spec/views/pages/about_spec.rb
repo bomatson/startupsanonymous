@@ -6,10 +6,10 @@ describe 'pages/about' do
   end
 
   it 'renders "About" in the <h1>' do
-    rendered.should match '<h1>About</h1>'
+    rendered.should include 'Who We Are'
   end
 
   it 'renders "We are two entrepreneurs"' do
-    rendered.should match 'We are two entrepreneurs'
+    rendered.should match 'We are the ones'
   end
 end

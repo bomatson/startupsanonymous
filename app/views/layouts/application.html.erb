@@ -23,12 +23,12 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="row">
-      <p id="notice"><%= notice %></p>
+    <div>
+     <%= notice %>
 
     <%= yield %>
     </div>
-
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
