@@ -34,7 +34,7 @@
   -webkit-border-radius: 12px; 
   -moz-border-radius: 12px; 
   border-radius: 12px; 
-  min-height: 290px;
+  min-height: 330px;
   height: 100%;
 
 }
@@ -177,9 +177,6 @@ span.checkbox {
   margin-left: 2%;
 }
 
-#emailing {
-  width: 98%;
-}
 
 @media only screen and (max-width: 767px) {
   .row {
@@ -209,7 +206,7 @@ span.checkbox {
     padding: 0.5em;
   }
 
-  
+
   .coffee_pic{
   padding-left: 0;
   }
@@ -218,5 +215,10 @@ span.checkbox {
     margin-top: -13%;
     padding-left: 33%;
   }
+
+  #contact .columns {
+  margin-right: 5%;
+}
+
 
 }
