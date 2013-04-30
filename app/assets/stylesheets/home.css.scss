@@ -1,6 +1,4 @@
-
 .row {
-
   max-width: 100%;
   min-width: 768px;
   margin: 0 auto;
@@ -15,6 +13,7 @@
 .row .eight {
   width: 66.66667%;
 }
+
 .row .offset-by-two {
   margin-left: 16.66667%;
 }
@@ -36,7 +35,6 @@
   border-radius: 12px; 
   min-height: 330px;
   height: 100%;
-
 }
 
 #contact .columns.third {
@@ -52,17 +50,18 @@
 }
 
 #contact .three img {
-padding-top: 20px;
-padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #contact .three p {
-padding: 20px 20px 0 20px;
+  padding: 20px 20px 0 20px;
 }
 
 #orange{
   background-color: #f99b68;
 }
+
 h1.pumpkins {
   font-size: 65px;
   margin-bottom: 0;
@@ -78,11 +77,9 @@ h1.pumpkins {
   font-size: 24px;
   line-height: 28px;
   font-weight: lighter;
-
 }
 
 h2 {
-
   padding-top: 25px;
 }
 
@@ -90,9 +87,11 @@ h2 {
   font-size: 47px;
   text-align: center;
 }
+
 .first_text{
   text-align: center;
 }
+
 .second_text{
   font-size: 23px;
   font-weight: lighter;
@@ -118,8 +117,8 @@ div.background {
 
 .background_grey{
   background-color: #f7f7f7;
-
 }
+
 .top-bar {
   margin-bottom:0;
 }
@@ -133,7 +132,6 @@ div.background {
   font-size: 40px;
   text-align: center;
   padding-top: 65px;
-
 }
 
 .coffee_pic{
@@ -148,20 +146,20 @@ div.background {
 }
 
 .mission {
-width: 85%;
-padding-left: 15%;
-margin-bottom: 100px;
+  width: 85%;
+  padding-left: 15%;
+  margin-bottom: 100px;
 }
 
 #new_user {
-margin-top: 25px;
-margin-left: 3%;
-min-height: 120px;
+  margin-top: 25px;
+  margin-left: 3%;
+  min-height: 120px;
 }
 
 #new_user input {
   height: 50px;
-font-size: 24px;
+  font-size: 24px;
 }
 
 #new_user input.button {
@@ -176,7 +174,6 @@ opacity: 0.85;
 span.checkbox {
   margin-left: 2%;
 }
-
 
 @media only screen and (max-width: 767px) {
   .row {
@@ -206,9 +203,8 @@ span.checkbox {
     padding: 0.5em;
   }
 
-
   .coffee_pic{
-  padding-left: 0;
+    padding-left: 0;
   }
 
   .hands {
@@ -217,8 +213,6 @@ span.checkbox {
   }
 
   #contact .columns {
-  margin-right: 5%;
-}
-
-
+    margin-right: 5%;
+  }
 }
