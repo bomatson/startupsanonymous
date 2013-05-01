@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406223718) do
+ActiveRecord::Schema.define(:version => 20130501030304) do
+
+  create_table "schedules", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "timeslots", :force => true do |t|
+    t.integer  "schedule_id"
+    t.boolean  "confirmed",     :default => false
+    t.datetime "proposed_time"
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
