@@ -1,0 +1,5 @@
+%h1 Your Schedule
+= form_for @schedule do |s|
+  = s.fields_for :timeslots do |t|
+    = t.date_select :proposed_time
+    = t.submit :submit
