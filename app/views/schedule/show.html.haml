@@ -1,0 +1,9 @@
+%h3= "#{current_user.email}'s schedule"
+
+= link_to "Add new Timeslot", new_timeslot_path
+
+%ul
+  - @schedule.timeslots.each do |timeslot|
+    %li
+      = link_to timeslot.proposed_time.to_s(:short), edit_timeslot_path(timeslot) 
+      = link_to 'X', timeslot_path(timeslot), :method => :delete
