@@ -1,9 +1,0 @@
-%h1 Your Schedule
-= form_for @schedule do |s|
-  = s.fields_for :timeslots do |t|
-    = t.date_select :proposed_time
-    = t.submit :submit
-
-/ use this http://railscasts.com/episodes/196-nested-model-form-part-1
-/ http://railscasts.com/episodes/213-calendars-revised
-/ also need this http://railscasts.com/episodes/270-authentication-in-rails-3-1?view=asciicast
