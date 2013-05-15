@@ -1,5 +1,11 @@
 StartupsAnonymous::Application.routes.draw do
+
+  match '/login',  to: 'sessions#new'
+  match '/logout',  to: 'sessions#destroy'
+
   resources :users
+
+  resources :sessions
 
   resources :schedules
 

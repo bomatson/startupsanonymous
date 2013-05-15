@@ -15,6 +15,10 @@
       <div class="large-10 columns">
         <%= f.text_field :email, placeholder: "Enter your email here" %>
       </div>
+      <div class="large-2 columns">
+        <%= f.check_box :anonymous %>
+        Anonymous
+      </div>
       <div class="large-10 columns">
         <%= f.text_field :password, placeholder: "Enter a password here" %>
       </div>
@@ -23,6 +27,4 @@
       </div>
     </div>
   </div>
-    <%= f.check_box :anonymous %>
-        Anonymous
 <% end %>
