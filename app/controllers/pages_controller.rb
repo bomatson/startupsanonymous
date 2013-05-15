@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_filter :authentication_required
+
   def home
     @user = User.new
   end

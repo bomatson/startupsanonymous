@@ -5,7 +5,7 @@ StartupsAnonymous::Application.routes.draw do
 
   resources :users
 
-  resources :sessions
+  resource :sessions
 
   resources :schedules
 
