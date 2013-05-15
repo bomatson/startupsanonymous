@@ -1,8 +1,22 @@
-<%= form_for(User.new, html: {class: 'custom'}) do |f| %>
+
+<%= form_for(@user, html: {class: 'custom'}) do |f| %>
   <div class="row">
     <div class="large-12 columns" id="emailing">
+      <% if @user.errors.any? %>
+        <div class="error">
+          <h2>Invalid entry!</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
       <div class="large-10 columns">
         <%= f.text_field :email, placeholder: "Enter your email here" %>
+      </div>
+      <div class="large-10 columns">
+        <%= f.text_field :password, placeholder: "Enter a password here" %>
       </div>
       <div class="large-2 columns">
         <%= f.submit :Submit, class: "button prefix" %>
