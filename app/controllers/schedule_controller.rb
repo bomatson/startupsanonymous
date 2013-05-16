@@ -15,7 +15,7 @@ class ScheduleController < ApplicationController
       redirect_to schedule_path(@schedule)
     else
       flash[:error] = "You failed, give up."
-      render :action => :edit
+      render action: :edit
     end
   end
 end

@@ -9,10 +9,18 @@ gem 'bcrypt-ruby'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'guard-spork'
+  gem 'spork'
+end
 
+group :test do
+
+  gem 'factory_girl_rails'
+  gem 'rb-fsevent', :require => false
+  gem 'growl'
 end
 
 # Gems used only for assets and not required
