@@ -9,17 +9,30 @@
 
   <section class="top-bar-section">
 
-    <ul class="right">
+    <ul class="left">
       <li class="divider"></li>
       <li><a href="/help">Help</a></li>
       <li class="divider"></li>
       <li><a href="/resources">Resources</a></li>
       <li class="divider"></li>
-      <li><a href="/about">About</a>
+      <li><a href="/about">About</a></li>
+      <li class="divider"></li>
+      <li>
+        <% if signed_in? %>
+        <%= link_to "Meet a Listener", schedule_path %>
+        <% end %>
       </li>
       <li class="divider"></li>
     </ul>
 
-
+    <ul class="right">
+      <% if signed_in? %>
+        <li class="divider"></li>
+        <li><%= link_to "Logout", logout_path %></li>
+      <% else %> 
+        <li class="divider"></li>
+        <li><%= link_to "Log in!", login_path %></li>
+      <% end %>
+    </ul>
   </section>
 </nav>

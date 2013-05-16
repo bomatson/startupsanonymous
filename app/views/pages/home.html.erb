@@ -59,7 +59,7 @@
           </p>
         </div>
       </div>
-        <%= render "/users/new" %>
+        <%= render "/users/new" unless signed_in? %>
     </div>
   </div>
 </div>

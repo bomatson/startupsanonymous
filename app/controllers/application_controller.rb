@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
   respond_to :html
   before_filter :record_page
   before_filter :authentication_required
