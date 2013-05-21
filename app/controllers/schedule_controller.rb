@@ -7,9 +7,14 @@ class ScheduleController < ApplicationController
     @schedule = current_user.schedule
   end
 
+  # @schedule = current_user.schedule.update(params[:schedule])
+  # fat model, skinny controller (find blog post Jamis Buck)
+  # ask Andrew why DJ instead of Resque
+
   def update
     @schedule = current_user.schedule
     @schedule.attributes = params[:schedule]
+
     if @schedule.save
       flash[:notice] = "Schedule updated."
       redirect_to schedule_path(@schedule)
@@ -17,5 +22,6 @@ class ScheduleController < ApplicationController
       flash[:error] = "You failed, give up."
       render action: :edit
     end
+
   end
 end

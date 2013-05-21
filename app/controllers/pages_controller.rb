@@ -14,3 +14,7 @@ class PagesController < ApplicationController
   def resources
   end
 end
+
+#put about help resource sin public
+
+#homeController

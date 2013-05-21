@@ -5,9 +5,7 @@ class Timeslot < ActiveRecord::Base
 
   validates :proposed_time, presence: true
 
-  after_initialize :init
-
-    def init
-      self.confirmed  ||= false
-    end
+  after_initialize do
+    self.confirmed  ||= false
+  end
 end
