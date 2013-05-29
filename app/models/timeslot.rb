@@ -1,9 +1,9 @@
 class Timeslot < ActiveRecord::Base
-  attr_accessible :confirmed, :proposed_time
+  attr_accessible :confirmed, :start_time, :end_time
 
   belongs_to :schedule
 
-  validates :proposed_time, presence: true
+  validates :start_time, presence: true
 
   after_initialize do
     self.confirmed  ||= false

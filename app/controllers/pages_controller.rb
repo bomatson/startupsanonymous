@@ -15,6 +15,6 @@ class PagesController < ApplicationController
   end
 end
 
-#put about help resource sin public
+#put about help resources in public
 
-#homeController
+#use homeController

@@ -19,3 +19,5 @@ We are survivors of failures. We are the ones who laid people off. We made the "
 But we were also the recipients of great care and love by our friends and family (the same people we felt too much shame to talk to). For as much as we personalized and absorbed our company's failures, few precious people never stopped caring about us. Sometimes as it happened to us, casual near-strangers reached out because they knew "sometimes, a coffee can mean the world." We are not great, no, but we were lucky. 
 
 To our eternal regret, we were never able to pay back some of those who were there for us. So we want to pay it forward. In their silent memory.
+
+[![Code Climate](https://codeclimate.com/github/bomatson/startupsanonymous.png)](https://codeclimate.com/github/bomatson/startupsanonymous)

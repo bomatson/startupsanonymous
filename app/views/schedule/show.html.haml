@@ -5,5 +5,5 @@
 %ul
   - @schedule.timeslots.each do |timeslot|
     %li
-      = link_to timeslot.proposed_time.to_s(:short), edit_timeslot_path(timeslot) 
+      = link_to timeslot.start_time.to_s(:short), edit_timeslot_path(timeslot)
       = link_to 'X', timeslot_path(timeslot), :method => :delete
