@@ -1,0 +1,12 @@
+#new_timeslot select {
+  display:none;
+}
+
+.datetime:nth-child(1) {
+  width: 100px;
+}
+@media only screen and (max-width: 767px) {
+  #new_timeslot .columns {
+    width: 100% !important;
+  }
+}
