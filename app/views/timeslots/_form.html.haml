@@ -1,4 +1,4 @@
 = form_for @timeslot do |f|
-  = f.datetime_select(:start_time)
-  = f.datetime_select(:end_time)
+  = f.datetime_select(:start_time, default: DateTime.now, ampm: true)
+  = f.datetime_select(:end_time, default: DateTime.now + 1.hour, ampm: true)
   = f.submit :submit
