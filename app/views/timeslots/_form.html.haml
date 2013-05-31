@@ -3,12 +3,13 @@
   .row
     .large-6.columns
       %h2 Start Time
-      %span.datetime
-        = f.datetime_select(:start_time, default: DateTime.now, datetime_separator: "", ampm: true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
+      %div.datetime
+        = f.datetime_select(:start_time, default: DateTime.now, datetime_separator: "", time_separator: "", ampm: true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
   .row
     .large-6.columns
       %h2 End Time
-      = f.datetime_select(:end_time, default: DateTime.now + 1.hour, ampm: true)
+      %div.datetime
+        = f.datetime_select(:end_time, default: DateTime.now + 1.hour, ampm: true, datetime_separator: "", time_separator: "", :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
   .row
     .large-4.columns
-      = f.submit :submit, class: 'button prefix'
+      = f.submit :submit, class: 'button prefix', id: 'timeslot'

@@ -166,13 +166,13 @@ div.background {
   font-size: 24px;
 }
 
-#new_user input.button {
+#new_user input.button, #timeslot {
   background-color: #faa577;
   border-color: #f99b68;
 }
 
-#new_user input.button:hover {
-opacity: 0.85;
+#new_user input.button:hover, #timeslot:hover {
+  opacity: 0.85;
 }
 
 span.checkbox {

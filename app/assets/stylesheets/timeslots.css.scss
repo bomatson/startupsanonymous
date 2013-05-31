@@ -1,10 +1,18 @@
-#new_timeslot select {
+.datetime select {
   display:none;
 }
 
-.datetime:nth-child(1) {
-  width: 100px;
+div.datetime div:nth-of-type(4) {
+  width: 50% !important;
+  float: left;
 }
+
+div.datetime div:nth-of-type(5) {
+  width: 50% !important;
+  float: left;
+}
+
+
 @media only screen and (max-width: 767px) {
   #new_timeslot .columns {
     width: 100% !important;
