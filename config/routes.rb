@@ -1,5 +1,7 @@
 StartupsAnonymous::Application.routes.draw do
 
+  
+
   match '/login',  to: 'sessions#new'
   match '/logout',  to: 'sessions#destroy'
 
@@ -9,6 +11,7 @@ StartupsAnonymous::Application.routes.draw do
 
   resources :timeslots
   resource :schedule, :controller => :schedule
+  resources :password_resets
 
 
   match '/help', to: 'pages#help'
