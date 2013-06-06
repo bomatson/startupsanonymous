@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      # cookies.permanent[:auth_token] = user.auth_token
       sign_in @user
       UserMailer.confirm(@user).deliver
       redirect_to root_path, notice: 'Please check your email'

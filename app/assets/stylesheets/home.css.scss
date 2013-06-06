@@ -179,6 +179,10 @@ span.checkbox {
   margin-left: 2%;
 }
 
+#user_anonymous {
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
   .row {
     width: auto;
