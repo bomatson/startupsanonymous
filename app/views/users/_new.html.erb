@@ -20,7 +20,9 @@
         Anonymous
       </div>
       <div class="large-10 columns">
-        <%= f.text_field :password, placeholder: "Enter a password here" %>
+        <div class="field">
+        <%= f.password_field :password, placeholder: "Enter a password here" %>
+        </div>
       </div>
       <div class="large-2 columns">
         <%= f.submit :Submit, class: "button prefix" %>
