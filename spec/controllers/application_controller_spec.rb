@@ -27,7 +27,7 @@ describe ApplicationController do
 
     it 'should be success when logged in' do
       user = create(:user)
-      session[:user_id] = user.id
+      cookies[:auth_token] = user.auth_token
       get :index
       response.should be_success
     end
