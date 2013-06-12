@@ -5,6 +5,8 @@ gem 'mail'
 gem 'newrelic_rpm'
 gem 'google-analytics-rails'
 gem 'bcrypt-ruby'
+gem "cancan"
+gem "letter_opener", group: :development
 
 group :development, :test do
   gem 'sqlite3'

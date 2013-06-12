@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   attr_accessible :email, :name, :password, :password_confirmation, :anonymous
   has_secure_password
   validates :email, presence: true, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
@@ -7,12 +8,16 @@ class User < ActiveRecord::Base
   validates_presence_of :schedule
 
   before_create { generate_token(:auth_token)}
+  after_create :default_role
 
   has_one :schedule
   has_many :timeslots, through: :schedule
 
   before_validation :build_my_schedule, :on => :create
-  
+
+  ROLES = %w[entrepreneur listener admin]
+
+
   def send_password_reset
     generate_token(:password_reset_token)
     self.password_reset_at = Time.zone.now
@@ -34,5 +39,10 @@ class User < ActiveRecord::Base
 
   def build_my_schedule
     build_schedule
+  end
+
+  def default_role
+    self.role = "entrepreneur"
+    self.save
   end
 end
