@@ -7,9 +7,9 @@ class Ability
       user ||= User.new 
 
       if user.role == "listener"
-        can :manage, :all
+        can :manage, Timeslot
       else
-        can :read, :all
+        can :read, Timeslot
       end
 
       # if user.is? :listener
