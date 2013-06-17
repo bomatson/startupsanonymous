@@ -1,1 +1,2 @@
-= render :partial => 'form'
+- if can? :update, @timeslot
+  = render :partial => 'form'

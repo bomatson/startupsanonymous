@@ -6,11 +6,17 @@ class Ability
     
       user ||= User.new 
 
-      if user.is? :listener
-        can :update, Timeslot, schedule: user.schedule.id
-      elsif user.is? :entrepreneur
-        cannot :update, Timeslot, schedule: user.schedule.id
+      if user.role == "listener"
+        can :manage, :all
+      else
+        can :read, :all
       end
+
+      # if user.is? :listener
+      #   can :udpate, Timeslot, schedule: user.schedule.id
+      # elsif user.is? :entrepreneur
+      #   cannot :update, Timeslot, schedule: user.schedule.id
+      # end
     
     # The first argument to `can` is the action you are giving the user 
     # permission to do.

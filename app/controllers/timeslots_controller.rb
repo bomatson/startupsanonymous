@@ -1,7 +1,7 @@
 class TimeslotsController < ApplicationController
   before_filter :load_schedule
   before_filter :load_timeslot, :only => [:edit, :update, :destroy]
-  # check_authorization
+  load_and_authorize_resource
 
   def new
     @timeslot = @schedule.timeslots.new
