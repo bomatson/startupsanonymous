@@ -16,6 +16,7 @@ group :development, :test do
   gem 'capybara'
   gem 'guard-spork'
   gem 'spork'
+  gem 'debugger'
 end
 
 group :test do

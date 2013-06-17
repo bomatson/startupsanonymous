@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  attr_accessible :email, :name, :password, :password_confirmation, :anonymous
+  attr_accessible :email, :name, :password, :password_confirmation, :anonymous, :role
   has_secure_password
   validates :email, presence: true, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   validates_presence_of :password, on: :create
@@ -30,7 +30,10 @@ class User < ActiveRecord::Base
       self[column] = SecureRandom.urlsafe_base64
     end while User.exists?(column => self[column])
   end
-
+  
+  def is?(role)
+    ROLES.include?(role.to_s)
+  end
   #run rake task to create passwords and auth tokens for existing users
   #find path to reset passwords for existing users
   #index auth token

@@ -51,4 +51,21 @@ describe User do
         }.to_not change { user.schedule }.from(nil)
       end
     end
+
+    describe 'roles' do
+
+
+      # it 'listener can create timeslots' do
+      #   user = create(:user, role: "listener" )
+      #   timeslot = create(:timeslot, schedule: user.schedule)
+      #   expect {
+      #     timeslot.confirmed = true
+      #     timeslot.save!
+      #   }.to change { user.timeslot.attributes }
+      # end
+
+      it 'entrepreneur is the default' do
+        create(:user).role.should eq("entrepreneur")    
+      end
+    end
 end
