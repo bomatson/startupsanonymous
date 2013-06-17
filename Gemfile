@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '3.2.12'
 gem 'mail'
 gem 'newrelic_rpm'
@@ -30,12 +32,12 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'zurb-foundation'
-  gem 'haml-rails'
 end
 
+gem 'haml-rails'
+gem 'coffee-rails', '~> 3.2.1'
 gem 'jquery-rails'
 
 group :production do
