@@ -16,13 +16,6 @@
         <%= link_to "Listener Availability", timeslots_path %>
         <% end %>
       </li>
-      <li class="divider"></li>
-      <li><a href="/help">Help</a></li>
-      <li class="divider"></li>
-      <li><a href="/resources">Resources</a></li>
-      <li class="divider"></li>
-      <li><a href="/about">About</a></li>
-      <li class="divider"></li>
       <li>
         <% if signed_in? && current_user.role == "listener" %>
         <%= link_to "My Schedule", schedule_path %>
@@ -32,6 +25,13 @@
     </ul>
 
     <ul class="right">
+      <li class="divider"></li>
+      <li><a href="/help">Help</a></li>
+      <li class="divider"></li>
+      <li><a href="/resources">Resources</a></li>
+      <li class="divider"></li>
+      <li><a href="/about">About</a></li>
+      <li class="divider"></li>
       <% if signed_in? %>
         <li class="divider"></li>
         <li><%= link_to "Logout", logout_path %></li>
