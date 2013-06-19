@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
   before_filter :record_page
   before_filter :authentication_required
 
+  rescue_from CanCan::AccessDenied do |exception|
+  flash[:error] = "Sorry, you aren't allowed to do that!"
+  redirect_to root_url
+  end
+
 
   private
     def record_page
