@@ -1,0 +1,11 @@
+#timeslots
+  %h2#month 
+    = link_to "<", date: @date.prev_month
+    = @date.strftime("%B %Y")
+    = link_to ">", date: @date.next_month
+  = calendar do |date|
+    =date.day
+    - if @timeslots_by_date[date]
+      %ul
+        -@timeslots_by_date[date].each do |timeslot|
+          %li= link_to timeslot.start_time, timeslot

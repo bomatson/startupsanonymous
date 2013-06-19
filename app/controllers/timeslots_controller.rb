@@ -32,6 +32,16 @@ class TimeslotsController < ApplicationController
     end
   end
 
+  def show
+    @timeslot = Timeslot.find(params[:id])
+  end
+
+  def index
+    @timeslots = Timeslot.all
+    @timeslots_by_date = Timeslot.group_by_date()
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today   
+  end
+
   def destroy
     @timeslot.destroy
     flash.notice = 'timeslot destroyed'

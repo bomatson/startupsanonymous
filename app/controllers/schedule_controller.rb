@@ -1,6 +1,11 @@
 class ScheduleController < ApplicationController
   def show
     @schedule = current_user.schedule
+    @timeslots_by_date = Timeslot.group_by_date(@schedule.timeslots)
+    @date = params[:date] ? Date.parse(params[:date]) : Date.today   
+
+#one persons schedule
+
   end
 
   def edit

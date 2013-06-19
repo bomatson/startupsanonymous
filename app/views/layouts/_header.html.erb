@@ -11,6 +11,12 @@
 
     <ul class="left">
       <li class="divider"></li>
+      <li>
+        <% if signed_in? %>
+        <%= link_to "Listener Availability", timeslots_path %>
+        <% end %>
+      </li>
+      <li class="divider"></li>
       <li><a href="/help">Help</a></li>
       <li class="divider"></li>
       <li><a href="/resources">Resources</a></li>
@@ -18,8 +24,8 @@
       <li><a href="/about">About</a></li>
       <li class="divider"></li>
       <li>
-        <% if signed_in? %>
-        <%= link_to "Schedule", schedule_path %>
+        <% if signed_in? && current_user.role == "listener" %>
+        <%= link_to "My Schedule", schedule_path %>
         <% end %>
       </li>
       <li class="divider"></li>
