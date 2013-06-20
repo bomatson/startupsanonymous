@@ -22,7 +22,7 @@ class TimeslotsController < ApplicationController
   end    
 
   def update
-    @timeslot.attributes = params[:timeslot]
+    @timeslot.update_attributes(params[:timeslot])  
     if (@timeslot.save)
       flash.notice = 'timeslot updated'
       redirect_to schedule_path

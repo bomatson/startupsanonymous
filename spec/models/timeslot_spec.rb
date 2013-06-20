@@ -1,13 +1,24 @@
 require 'spec_helper'
 
 describe Timeslot do
-  it 'validates a start time presence' do
-    timeslot = Timeslot.new(:confirmed => false)
-    timeslot.should_not be_valid
+  subject{timeslot}
+  let(:timeslot){create(:timeslot)}
+  let(:invalid_timeslot){
+    g = build(:timeslot, start_time: '')
+    g.save(validate: false)
+    g
+  }
+
+  context 'when validates a start time presence' do
+    it {invalid_timeslot.should_not be_valid}
   end
 
-  it 'validates a default for confirmed' do
-    timeslot = Timeslot.new(:start_time => DateTime.new)
-    timeslot.should be_valid
+  context 'when validates a default for confirmed' do
+    it{should be_valid}
   end
+
+  context 'when initializing booking is false' do
+    it {timeslot.confirmed.should be_false}
+  end
+
 end

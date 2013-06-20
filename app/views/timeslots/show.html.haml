@@ -1,1 +1,8 @@
-%h3 here is where a timeslot will chill
+%h3
+  Starts at
+  = @timeslot.start_time.strftime("%d %b %Y %I:%M %p")
+%h3.subheader
+  Timeslot for   
+  = @timeslot.schedule.user.email
+.button
+  = link_to 'Book it', timeslot_path(@timeslot, timeslot: {confirmed: :true}), method: :put, confirm: "Are you sure?"
