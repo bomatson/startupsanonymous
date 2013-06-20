@@ -23,7 +23,10 @@ class TimeslotsController < ApplicationController
 
   def update
     @timeslot.update_attributes(params[:timeslot])  
-    if (@timeslot.save)
+    if (@timeslot.save) && @timeslot.update_attributes(params[:confirmed])
+      flash.notice = 'Timeslot confirmed! Please check your email'
+      redirect_to timeslots_path
+    elsif (@timeslot.save) 
       flash.notice = 'timeslot updated'
       redirect_to schedule_path
     else

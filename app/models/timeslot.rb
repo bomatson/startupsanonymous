@@ -13,8 +13,4 @@ class Timeslot < ActiveRecord::Base
     scope.all.group_by {|i| i.start_time.to_date}
   end
 
-  def owner
-    
-  end
-
 end
