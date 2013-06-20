@@ -9,7 +9,11 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       sign_in user
-      redirect_back root_url, notice: "Logged in!"
+      if user.role == 'entrepreneur'
+        redirect_to timeslots_path, notice: "Logged in!"
+      else
+        redirect_to schedule_path, notice: "Logged in, Listener!"
+      end 
     else
       flash.now.alert = "Invalid, my friend! Try again"
       render "new"

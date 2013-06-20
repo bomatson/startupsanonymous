@@ -1,6 +1,5 @@
 %h1 Log In
-/ please log in to view the listener schedule
-/ when u log in and sign up lead right to availability for listener
+%h2.subheader Please log in to view Listener availability
 = form_tag sessions_path do
   .field
     = label_tag :email
@@ -8,7 +7,7 @@
   .field
     = label_tag :password
     = password_field_tag :password
-  %p= link_to "Did you forget your password, silly?", new_password_reset_path
+  %p= link_to "Did you forget your password? Never fear.", new_password_reset_path
   .field
     = label_tag :remember_me
     = check_box_tag :remember_me, 1, params[:remember_me]

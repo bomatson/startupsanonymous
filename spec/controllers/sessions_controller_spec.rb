@@ -12,9 +12,9 @@ describe SessionsController do
   describe "POST 'create'" do
     let(:user) { create(:user, :password => 'secret') }
 
-    it "logs user in and sends them to the home page when successful" do
+    it "logs user in and sends them to the timeslots page when successful" do
       post 'create', :email => user.email, :password => 'secret'
-      response.should redirect_to root_url
+      response.should redirect_to timeslots_path
       flash[:notice].should_not be_nil
       cookies[:auth_token].should == user.auth_token
     end

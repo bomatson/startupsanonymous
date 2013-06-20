@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
       UserMailer.confirm(@user).deliver
-      redirect_to root_path, notice: 'Please check your email'
+      redirect_to timeslots_path, notice: 'Please check your email'
     else
       redirect_to root_path, notice: 'Sorry, we were unable to sign you up'
     end
