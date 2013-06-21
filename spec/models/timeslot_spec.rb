@@ -14,7 +14,7 @@ describe Timeslot do
   end
 
   context 'when validates a default for confirmed' do
-    it{should be_valid}
+    it {should be_valid}
   end
 
   context 'when initializing booking is false' do

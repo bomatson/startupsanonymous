@@ -52,6 +52,9 @@ Spork.prefork do
     config.include FactoryGirl::Syntax::Methods
 
     config.include Capybara::DSL
+
+    config.include AuthRequestHelper, :type => :request
+    config.include AuthHelper, :type => :controller
   end
 end
 
