@@ -3,6 +3,6 @@
   = @timeslot.start_time.strftime("%d %b %Y %I:%M %p")
 %h3.subheader
   Timeslot for   
-  = @timeslot.schedule.user.email
+  = @timeslot.schedule.user.anonymous_check
 .button
   = link_to 'Book it', timeslot_path(@timeslot, timeslot: {confirmed: :true}), method: :put, confirm: "Are you sure?"
