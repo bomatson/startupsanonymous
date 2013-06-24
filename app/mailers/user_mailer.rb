@@ -23,4 +23,9 @@ class UserMailer < ActionMailer::Base
     @timeslot = timeslot
     mail(to: listener.email, subject: 'Connected with Someone in Need')
   end
+
+  def cancel(entrepreneur, timeslot)
+    @timeslot = timeslot
+    mail(to: entrepreneur.email, subject: 'The Listener has canceled the meeting')
+  end
 end

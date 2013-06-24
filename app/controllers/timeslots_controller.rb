@@ -55,8 +55,10 @@ class TimeslotsController < ApplicationController
   end
 
   def destroy
+    @entrepreneur = User.first
     @timeslot.destroy
-    flash.notice = 'timeslot destroyed'
+    UserMailer.cancel(@entrepreneur, @timeslot).deliver if @timeslot.confirmed
+    flash.notice = 'timeslot removed'
     redirect_to schedule_path
   end
 

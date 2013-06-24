@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
     def authentication_required
       if (!current_user)
-        flash.alert = 'You must be logged in to access that page, dum dum'
+        flash.alert = 'You must be logged in to access that page'
         redirect_to '/login'
       end
     end
