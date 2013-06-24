@@ -1,6 +1,6 @@
 class TimeslotsController < ApplicationController
-  # before_filter :load_schedule
-  # before_filter :load_timeslot, :only => [:edit, :update, :destroy]
+  before_filter :load_schedule
+  before_filter :load_timeslot, :only => [:edit, :update, :destroy]
   load_and_authorize_resource
 
   def new
@@ -29,9 +29,9 @@ class TimeslotsController < ApplicationController
     @timeslot.update_attributes(params[:timeslot])  
     if (@timeslot.save) && @timeslot.update_attributes(params[:confirmed])
 
-      UserMailer.listener_connection(@current_user).deliver
+      UserMailer.listener_connection(@current_user, @listener, @timeslot).deliver
       #this could save a life
-      UserMailer.entrepreneur_connection(@listener).deliver
+      UserMailer.entrepreneur_connection(@listener, @current_user, @timeslot).deliver
 
       flash.notice = 'Timeslot confirmed! Please check your email'
       redirect_to timeslots_path

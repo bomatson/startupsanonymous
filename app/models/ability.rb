@@ -6,13 +6,12 @@ class Ability
     
       user ||= User.new 
 
-      can :manage, Timeslot
-
-      # if user.role == "listener"
-      #   can :manage, Timeslot
-      # else
-      #   can :read, Timeslot
-      # end
+      if user.role == "listener"
+        can :manage, Timeslot
+      else
+        can :update, Timeslot
+        can :read, Timeslot
+      end
 
       # if user.is? :listener
       #   can :udpate, Timeslot, schedule: user.schedule.id

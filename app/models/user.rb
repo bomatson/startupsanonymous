@@ -34,6 +34,15 @@ class User < ActiveRecord::Base
   def is?(role)
     ROLES.include?(role.to_s)
   end
+
+  def anonymous_check
+    if self.anonymous? 
+      "Anonymous"
+    else
+      self.email 
+    end
+  end
+
   #run rake task to create passwords and auth tokens for existing users
   #find path to reset passwords for existing users
   #index auth token
