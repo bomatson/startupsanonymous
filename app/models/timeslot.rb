@@ -1,5 +1,5 @@
 class Timeslot < ActiveRecord::Base
-  attr_accessible :confirmed, :start_time, :end_time
+  attr_accessible :confirmed, :start_time, :end_time, :requester_id
 
   belongs_to :schedule
 

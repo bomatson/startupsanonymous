@@ -24,14 +24,14 @@ class TimeslotsController < ApplicationController
   def update
     @listener = @timeslot.schedule.user
 
-    @current_user = current_user
+    @entrepreneur = current_user
 
     @timeslot.update_attributes(params[:timeslot])  
     if (@timeslot.save) && @timeslot.update_attributes(params[:confirmed])
 
-      UserMailer.listener_connection(@current_user, @listener, @timeslot).deliver
+      UserMailer.listener_connection(@entrepreneur, @listener, @timeslot).deliver
       #this could save a life
-      UserMailer.entrepreneur_connection(@listener, @current_user, @timeslot).deliver
+      UserMailer.entrepreneur_connection(@listener, @entrepreneur, @timeslot).deliver
 
       flash.notice = 'Timeslot confirmed! Please check your email'
       redirect_to timeslots_path
@@ -55,7 +55,7 @@ class TimeslotsController < ApplicationController
   end
 
   def destroy
-    @entrepreneur = User.first
+    @entrepreneur = User.find_by_id(@timeslot.requester_id)
     @timeslot.destroy
     UserMailer.cancel(@entrepreneur, @timeslot).deliver if @timeslot.confirmed
     flash.notice = 'timeslot removed'

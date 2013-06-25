@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612043745) do
+ActiveRecord::Schema.define(:version => 20130625012125) do
 
   create_table "schedules", :force => true do |t|
     t.integer  "user_id"
@@ -21,11 +21,12 @@ ActiveRecord::Schema.define(:version => 20130612043745) do
 
   create_table "timeslots", :force => true do |t|
     t.integer  "schedule_id"
-    t.boolean  "confirmed",   :default => false
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.boolean  "confirmed",    :default => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.datetime "start_time"
     t.datetime "end_time"
+    t.integer  "requester_id"
   end
 
   create_table "users", :force => true do |t|

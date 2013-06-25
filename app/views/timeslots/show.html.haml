@@ -5,4 +5,4 @@
   Timeslot for   
   = @timeslot.schedule.user.anonymous_check
 .button
-  = link_to 'Book it', timeslot_path(@timeslot, timeslot: {confirmed: :true}), method: :put, confirm: "Are you sure?"
+  = link_to 'Book it', timeslot_path(@timeslot, timeslot: {confirmed: :true, requester_id: current_user.id}), method: :put, confirm: "Are you sure?"
