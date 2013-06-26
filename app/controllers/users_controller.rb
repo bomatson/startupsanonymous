@@ -25,15 +25,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
+    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-        sign_in @user
         flash[:success] = "Yay! Profile updated"
         redirect_to @user
     else
     render 'edit'
     end
-
   end
 
 end

@@ -34,7 +34,7 @@ describe UsersController do
     describe 'with valid params' do
       it 'updates the new skype username' do
       put :update, id: user.id, user: { skype: 'bobby.matson' }
-      response.should be_success
+      response.should redirect_to @user
       end
     end
 
