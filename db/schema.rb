@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625012125) do
+ActiveRecord::Schema.define(:version => 20130626023401) do
 
   create_table "schedules", :force => true do |t|
     t.integer  "user_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130625012125) do
     t.string   "password_reset_token"
     t.datetime "password_reset_at"
     t.string   "role"
+    t.string   "skype"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

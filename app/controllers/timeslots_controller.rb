@@ -30,7 +30,6 @@ class TimeslotsController < ApplicationController
     if (@timeslot.save) && @timeslot.update_attributes(params[:confirmed])
 
       UserMailer.listener_connection(@entrepreneur, @listener, @timeslot).deliver
-      #this could save a life
       UserMailer.entrepreneur_connection(@listener, @entrepreneur, @timeslot).deliver
 
       flash.notice = 'Timeslot confirmed! Please check your email'

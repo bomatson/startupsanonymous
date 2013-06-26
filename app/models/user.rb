@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  attr_accessible :email, :name, :password, :password_confirmation, :anonymous, :role
+  attr_accessible :email, :name, :password, :password_confirmation, :anonymous, :role, :skype
   has_secure_password
   validates :email, presence: true, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   validates_presence_of :password, on: :create
