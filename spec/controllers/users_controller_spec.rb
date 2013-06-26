@@ -25,4 +25,18 @@ describe UsersController do
 
     end
   end
+
+
+  describe 'PUT update' do
+
+    let(:user) { create(:user, :password => 'secret') }
+    
+    describe 'with valid params' do
+      it 'updates the new skype username' do
+      put :update, id: user.id, user: { skype: 'bobby.matson' }
+      response.should be_success
+      end
+    end
+
+  end
 end

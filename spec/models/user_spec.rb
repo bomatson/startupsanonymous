@@ -68,4 +68,12 @@ describe User do
         create(:user).role.should eq("entrepreneur")    
       end
     end
+
+    describe 'skype username' do
+      it 'will save a skype username' do
+        user = create(:user)
+        user.skype =  "bobby.matson"
+        user.skype.should eq("bobby.matson")
+      end
+    end
 end
