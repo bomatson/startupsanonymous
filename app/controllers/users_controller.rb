@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :authentication_required
+  skip_before_filter :authentication_required, only: [:new, :create]
 
   def new
     @user = User.new
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
+        sign_in @user
         flash[:success] = "Yay! Profile updated"
         redirect_to @user
     else
