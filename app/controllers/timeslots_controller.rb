@@ -27,16 +27,17 @@ class TimeslotsController < ApplicationController
     @entrepreneur = current_user
 
     @timeslot.update_attributes(params[:timeslot])  
-    if (@timeslot.save) && @timeslot.update_attributes(params[:confirmed])
-
-      UserMailer.listener_connection(@entrepreneur, @listener, @timeslot).deliver
-      UserMailer.entrepreneur_connection(@listener, @entrepreneur, @timeslot).deliver
-
-      flash.notice = 'Timeslot confirmed! Please check your email'
-      redirect_to timeslots_path
-    elsif (@timeslot.save) 
-      flash.notice = 'timeslot updated'
-      redirect_to schedule_path
+    if (@timeslot.save)
+      if current_user == @listener
+        flash.notice = 'timeslot updated'
+        redirect_to schedule_path
+      elsif current_user == @entrepreneur
+        #clean this up
+        UserMailer.listener_connection(@entrepreneur, @listener, @timeslot).deliver
+        UserMailer.entrepreneur_connection(@listener, @entrepreneur, @timeslot).deliver
+        flash.notice = 'Timeslot confirmed! Please check your email'
+        redirect_to timeslots_path
+      end
     else
       flash.now.alert = 'there was an error saving your timeslot'
       render 'edit'

@@ -6,18 +6,19 @@ describe TimeslotsController do
   before {sign_in(user)}
 
   describe "PUT #update" do
-    context 'when editing a time' do
+    context 'when listener is editing a time' do
       example do
-        timeslot = create(:timeslot, end_time: DateTime.now)
-        put :update, end_time: timeslot.end_time
+        timeslot = create(:timeslot, schedule: user.schedule)
+        user.role == "listener"
+        put :update, id: timeslot.id, timeslot: {end_time: DateTime.now}
         response.should redirect_to schedule_path
       end
     end
 
-    context 'when confirming a timeslot' do
+    context 'when an entrepreneur is confirming a timeslot' do
       example do
-        timeslot = create(:timeslot, confirmed: true)
-        put :update, id: timeslot.id
+        timeslot = create(:timeslot)
+        put :update, id: timeslot.id, timeslot: {confirmed: true}
         response.should redirect_to timeslots_path
       end
     end
