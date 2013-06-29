@@ -4,7 +4,9 @@ Your conversation with
 is confirmed for  
 = @timeslot.start_time.strftime("%d %b %Y %I:%M %p")
 
-%p You can reach them on Skype at this username: 
+%p 
+You can reach them on Skype at this username: 
+= @listener.skype
 
 -if @entrepreneur.anonymous?
   %p If you choose to stay anonymous for the call, we recommend using a fake Skype username

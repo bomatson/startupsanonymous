@@ -11,16 +11,14 @@ describe "User" do
 
     context "where listener can update timeslots" do
       let(:user){ create(:listener) } 
-      #this is still not passing
 
       it{ should be_able_to(:update, timeslot) }
     end
 
-    context "where entrepreneur cannot update timeslots" do
+    context "where entrepreneur cannot create timeslots" do
       let(:user){ create(:entrepreneur) }
 
-      it{ 
-        should_not be_able_to(:update, timeslot) }
+      it{ should_not be_able_to(:create, timeslot) }
     end
   end
 end
