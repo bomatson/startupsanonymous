@@ -1,17 +1,16 @@
-.row
+.row.scheduling
   .large-6.columns
-    %h3= "#{current_user.email}'s schedule"
-
-    %h4 Please click on a timeslot to edit 
-
-    = link_to "Add new Timeslot", new_timeslot_path
-
+    %h2 Your schedule
+    - if @current_user.timeslots.present?
+      %h4.subheader Please click on a timeslot to edit it 
     %ul
       - @schedule.timeslots.each do |timeslot|
         %li
           = link_to timeslot.formatted_start_time, edit_timeslot_path(timeslot)
           = link_to 'X', timeslot_path(timeslot), :method => :delete
           = "Booked" if timeslot.confirmed
+    .button#timeslot
+      = link_to "Add new timeslot", new_timeslot_path
 
   .large-6.columns
     = render template: 'users/edit', locales: current_user
