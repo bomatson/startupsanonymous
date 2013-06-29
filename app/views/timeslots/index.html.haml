@@ -1,4 +1,10 @@
-%h2 Listener Availability
-%h2.subheader Please click on a timeslot to book it
-
-= render partial: 'calendar'
+.row 
+  %h2 Listener Availability
+  %h2.subheader Please click on a timeslot to book it
+.row
+  - if @closest.present?
+    %p 
+    Next available timeslot:
+    = link_to @closest.formatted_start_time, @closest
+.row 
+  = render partial: 'calendar'

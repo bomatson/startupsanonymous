@@ -7,7 +7,7 @@
 %ul
   - @schedule.timeslots.each do |timeslot|
     %li
-      = link_to timeslot.start_time.strftime("%d %b %Y %I:%M %p"), edit_timeslot_path(timeslot)
+      = link_to timeslot.formatted_start_time, edit_timeslot_path(timeslot)
       = link_to 'X', timeslot_path(timeslot), :method => :delete
       = "Booked" if timeslot.confirmed
 

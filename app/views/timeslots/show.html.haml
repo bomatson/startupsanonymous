@@ -1,6 +1,6 @@
 %h3
   Starts at
-  = @timeslot.start_time.strftime("%d %b %Y %I:%M %p")
+  = @timeslot.formatted_start_time
 %h3.subheader
   Timeslot for   
   = @timeslot.schedule.user.anonymous_check

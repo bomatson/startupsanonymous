@@ -52,6 +52,7 @@ class TimeslotsController < ApplicationController
     @timeslots = Timeslot.all
     @timeslots_by_date = Timeslot.group_by_date()
     @date = params[:date] ? Date.parse(params[:date]) : Date.today   
+    @closest = Timeslot.closest.first
   end
 
   def destroy
