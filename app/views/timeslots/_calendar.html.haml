@@ -9,4 +9,4 @@
       %ul
         -@timeslots_by_date[date].each do |timeslot|
           - unless timeslot.confirmed
-            %li= link_to timeslot.start_time, timeslot
+            %li= link_to timeslot.only_start_time, timeslot

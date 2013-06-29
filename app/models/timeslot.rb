@@ -17,7 +17,11 @@ class Timeslot < ActiveRecord::Base
   end
 
   def formatted_start_time
-    self.start_time.strftime("%d %b %Y %I:%M %p")
+    self.start_time.strftime("%B %d %Y %I:%M %p")
+  end
+
+  def only_start_time
+    self.start_time.strftime("%I:%M %p")
   end
 
 end
