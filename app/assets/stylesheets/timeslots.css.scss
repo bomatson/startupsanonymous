@@ -19,9 +19,14 @@ div.datetime div:nth-of-type(5) {
   }
 }
 
-.calendar-heading {
+.calendar-heading, .showing {
   h2{ margin-top: 5%;}
 }
+
+.editing {
+  h4{ margin-top: 5%;}
+}
+
 
 #timeslots {
   margin-top: 3%;

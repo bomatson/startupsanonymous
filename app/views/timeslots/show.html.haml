@@ -1,8 +1,10 @@
-%h3
-  Starts at
-  = @timeslot.formatted_start_time
-%h3.subheader
-  Timeslot for   
-  = @timeslot.schedule.user.anonymous_check
-.button
-  = link_to 'Book it', timeslot_path(@timeslot, timeslot: {confirmed: :true, requester_id: current_user.id}), method: :put, confirm: "Are you sure?"
+.row.showing
+  .large-8.columns
+    %h2
+      Timeslot for   
+      = @timeslot.schedule.user.anonymous_check
+    %h2.subheader
+      Starts at
+      = @timeslot.formatted_start_time
+    .button#timeslot
+      = link_to 'Book it!', timeslot_path(@timeslot, timeslot: {confirmed: :true, requester_id: current_user.id}), method: :put, confirm: "You are confirming at timeslot with this Listener"

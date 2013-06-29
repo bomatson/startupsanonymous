@@ -168,15 +168,6 @@
     font-size: 24px;
   }
 
-  #new_user input.button, #timeslot {
-    background-color: #faa577;
-    border-color: #f99b68;
-  }
-
-  #new_user input.button:hover, #timeslot:hover {
-    opacity: 0.85;
-  }
-
   span.checkbox {
     margin-left: 2%;
   }
@@ -226,4 +217,16 @@
       margin-right: 5%;
     }
   }
+}
+
+input.button, #timeslot {
+  background-color: #faa577;
+  border-color: #f99b68;
+  a {
+    color: white;
+  }
+}
+
+input.button:hover, #timeslot:hover {
+  opacity: 0.85;
 }

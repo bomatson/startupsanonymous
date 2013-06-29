@@ -1,14 +1,16 @@
-%h3= "#{current_user.email}'s schedule"
+.row
+  .large-8.columns
+    %h3= "#{current_user.email}'s schedule"
 
-%h4 Please click on a timeslot to edit 
+    %h4 Please click on a timeslot to edit 
 
-= link_to "Add new Timeslot", new_timeslot_path
+    = link_to "Add new Timeslot", new_timeslot_path
 
-%ul
-  - @schedule.timeslots.each do |timeslot|
-    %li
-      = link_to timeslot.formatted_start_time, edit_timeslot_path(timeslot)
-      = link_to 'X', timeslot_path(timeslot), :method => :delete
-      = "Booked" if timeslot.confirmed
+    %ul
+      - @schedule.timeslots.each do |timeslot|
+        %li
+          = link_to timeslot.formatted_start_time, edit_timeslot_path(timeslot)
+          = link_to 'X', timeslot_path(timeslot), :method => :delete
+          = "Booked" if timeslot.confirmed
 
 = render template: 'users/edit', locales: current_user

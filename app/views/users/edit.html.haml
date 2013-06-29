@@ -1,7 +1,7 @@
-%h2.subheader Please enter your skype username
 = form_for current_user, html: {class: 'custom'} do |f|
   .row
     .large-6.columns
+      %h2.subheader Please enter your skype username
       %div.datetime
         = f.text_field :skype
   .row

@@ -1,7 +1,7 @@
-%h4 Please select a time you are available 
-= form_for @timeslot, html: {class: 'custom'} do |f|
+= form_for @timeslot, html: {class: 'custom editing'} do |f|
   .row
     .large-6.columns
+      %h4 Please select a time you are available
       %h2 Start Time
       %div.datetime
         = f.datetime_select(:start_time, default: DateTime.now, datetime_separator: "", time_separator: "", ampm: true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
