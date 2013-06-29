@@ -1,5 +1,5 @@
 .row
-  .large-8.columns
+  .large-6.columns
     %h3= "#{current_user.email}'s schedule"
 
     %h4 Please click on a timeslot to edit 
@@ -13,4 +13,5 @@
           = link_to 'X', timeslot_path(timeslot), :method => :delete
           = "Booked" if timeslot.confirmed
 
-= render template: 'users/edit', locales: current_user
+  .large-6.columns
+    = render template: 'users/edit', locales: current_user
