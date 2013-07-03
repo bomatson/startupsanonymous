@@ -2,6 +2,8 @@ StartupsAnonymous::Application.routes.draw do
 
   
 
+  ActiveAdmin.routes(self)
+
   match '/login',  to: 'sessions#new'
   match '/logout',  to: 'sessions#destroy'
 

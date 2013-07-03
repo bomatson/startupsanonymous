@@ -9,6 +9,7 @@ gem 'google-analytics-rails'
 gem 'bcrypt-ruby'
 gem "cancan"
 gem "letter_opener", group: :development
+gem 'activeadmin'
 
 group :development, :test do
   gem 'sqlite3'
