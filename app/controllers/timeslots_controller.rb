@@ -32,7 +32,6 @@ class TimeslotsController < ApplicationController
         flash.notice = 'Timeslot updated! Booyah!'
         redirect_to schedule_path
       elsif current_user == @entrepreneur
-        #clean this up
         UserMailer.listener_connection(@entrepreneur, @listener, @timeslot).deliver
         UserMailer.entrepreneur_connection(@listener, @entrepreneur, @timeslot).deliver
         flash.notice = 'Timeslot confirmed! Please check your email'

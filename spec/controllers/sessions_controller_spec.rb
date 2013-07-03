@@ -23,7 +23,7 @@ describe SessionsController do
       post 'create', :email => user.email, :password => 'wrong'
       response.should be_success
       response.should render_template("new")
-      flash[:alert].should_not be_nil
+      flash[:error].should_not be_nil
       cookies[:auth_token].should be_nil
     end
   end

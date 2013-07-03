@@ -24,7 +24,7 @@ class ScheduleController < ApplicationController
       flash[:notice] = "Schedule updated."
       redirect_to schedule_path(@schedule)
     else
-      flash[:error] = "You failed, give up."
+      flash[:error] = "Oh shoot, there was a problem updating your schedule. Please try again"
       render action: :edit
     end
 

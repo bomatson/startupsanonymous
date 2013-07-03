@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       UserMailer.confirm(@user).deliver
       redirect_to timeslots_path, notice: 'Please check your email'
     else
-      redirect_to root_path, notice: 'Sorry, we were unable to sign you up'
+      redirect_to root_path, error: 'Sorry, we were unable to sign you up. Please do try again!'
     end
   end
 
@@ -27,10 +27,10 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-        sign_in @user
-        flash[:success] = "Yay! Profile updated"
-        redirect_to @user
+      sign_in @user
+      redirect_to @user, notice: "Yay! Profile updated"
     else
+      flash[:error] = "There was a problem updating your profile"
     render 'edit'
     end
   end
