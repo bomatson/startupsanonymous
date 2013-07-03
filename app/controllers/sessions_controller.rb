@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         redirect_to schedule_path, notice: "Logged in, Listener!"
       end 
     else
-      flash.now.alert = "Invalid, my friend! Try again"
+      flash.now[:error] = "Invalid, my friend! Try again"
       render "new"
     end
   end

@@ -10,10 +10,10 @@ class TimeslotsController < ApplicationController
   def create
     @timeslot = @schedule.timeslots.new(params[:timeslot])
     if (@timeslot.save)
-      flash.notice = 'new timeslot created'
+      flash.notice = 'New timeslot created! Hell yeah!'
       redirect_to schedule_path
     else
-      flash.now.alert = 'there was an error saving your timeslot'
+      flash.now[:error] = 'There was a problem saving your timeslot, please try again'
       render 'new'
     end
   end
@@ -29,7 +29,7 @@ class TimeslotsController < ApplicationController
     @timeslot.update_attributes(params[:timeslot])  
     if (@timeslot.save)
       if current_user == @listener
-        flash.notice = 'timeslot updated'
+        flash.notice = 'Timeslot updated! Booyah!'
         redirect_to schedule_path
       elsif current_user == @entrepreneur
         #clean this up
@@ -39,7 +39,7 @@ class TimeslotsController < ApplicationController
         redirect_to timeslots_path
       end
     else
-      flash.now.alert = 'there was an error saving your timeslot'
+      flash.now[:error] = 'There was a problem saving your timeslot, please try again'
       render 'edit'
     end
   end
@@ -59,7 +59,7 @@ class TimeslotsController < ApplicationController
     @entrepreneur = User.find_by_id(@timeslot.requester_id)
     @timeslot.destroy
     UserMailer.cancel(@entrepreneur, @timeslot).deliver if @timeslot.confirmed
-    flash.notice = 'timeslot removed'
+    flash.notice = 'Timeslot removed :('
     redirect_to schedule_path
   end
 

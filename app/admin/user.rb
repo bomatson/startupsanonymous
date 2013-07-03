@@ -40,10 +40,10 @@ ActiveAdmin.register User do
       row :email
       row :role
       row :skype
-      row :listener_timeslots do |user|
-        user.schedule.timeslots.map{|tag| tag.formatted_start_time}.join(", ")
+      row :offered_timeslots do |user|
+        user.timeslots.map{|t| t.formatted_start_time}.join(", ")
       end
-      row :entrepreneur_timeslots do |user|
+      row :requested_timeslots do |user|
         Timeslot.where('requester_id = ?', user.id).map{|t| t.formatted_start_time }.join(',')
       end
     end
