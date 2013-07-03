@@ -22,6 +22,12 @@
         <% end %>
       </li>
       <li class="divider"></li>
+      <li>
+        <% if signed_in? %>
+        <%= link_to "My Profile", user_path %>
+        <% end %>
+      </li>
+      <li class="divider"></li>
     </ul>
 
     <ul class="right">

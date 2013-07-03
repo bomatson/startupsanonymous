@@ -30,21 +30,12 @@ describe UsersController do
   describe 'PUT update' do
 
     let(:user) { create(:user, :password => 'secret') }
-    let(:hacker) { create(:user, :password => 'another') }    
 
     describe 'with valid params' do
       it 'updates the new skype username' do
         sign_in user
-        put :update, id: user.id, user: { skype: 'bobby.matson' }
+        put :update, user: { skype: 'bobby.matson' }
         response.should redirect_to @user
-      end
-    end
-
-    describe 'with invalid params' do
-      it 'does not allow another user to edit your user' do
-        sign_in hacker
-        put :update, id: user.id, user: { email: 'hacker@hack.com' }
-        user.email.should_not eql('hacker@hack.com')
       end
     end
 

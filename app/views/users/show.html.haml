@@ -1,1 +1,12 @@
-%h1= @user.anonymous_check
+.row 
+  .large-6.columns
+    %h1
+      = link_to_if can?(:update, @user), @user.anonymous_check, edit_user_path do
+        = @user.anonymous_check
+    %h4.subheader Your Schedule:
+    %ul
+      - @user.timeslots.each do |timeslot|
+        %li
+          = link_to timeslot.formatted_start_time, edit_timeslot_path(timeslot)
+          = link_to 'X', timeslot_path(timeslot), :method => :delete
+          = "Booked" if timeslot.confirmed

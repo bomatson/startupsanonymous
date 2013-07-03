@@ -6,6 +6,10 @@ class Ability
     
       user ||= User.new 
 
+      can :update, User do |other|
+        other.eql?(user)
+      end
+
       if user.role == "listener"
         can :manage, Timeslot
       else

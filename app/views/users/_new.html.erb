@@ -1,5 +1,5 @@
 
-<%= form_for(@user, html: {class: 'custom'}) do |f| %>
+<%= form_for(@user, url: user_path, html: {class: 'custom'}) do |f| %>
   <div class="row">
     <div class="large-12 columns" id="emailing">
       <% if @user.errors.any? %>

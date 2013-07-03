@@ -7,7 +7,9 @@ StartupsAnonymous::Application.routes.draw do
   match '/login',  to: 'sessions#new'
   match '/logout',  to: 'sessions#destroy'
 
-  resources :users
+  # resources :users, only: :show
+  resource :user, only: [:new, :show, :edit, :create, :update]
+  get "/users/:id", to: "users#show", as: :profile
 
   resource :sessions
 

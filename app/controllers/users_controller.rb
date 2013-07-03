@@ -18,17 +18,17 @@ class UsersController < ApplicationController
   end
 
   def show 
-    @user = User.find_by_id(params[:id])
+    @user = params[:id] ? User.find_by_id(params[:id]) : current_user
   end
 
   def edit
+    @user = current_user
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update_attributes(params[:user])
-      sign_in @user
-      redirect_to @user, notice: "Yay! Profile updated"
+      redirect_to user_path, notice: "Yay! Profile updated"
     else
       flash[:error] = "There was a problem updating your profile"
     render 'edit'

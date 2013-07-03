@@ -13,4 +13,4 @@
       = link_to "Add new timeslot", new_timeslot_path
 
   .large-6.columns
-    = render template: 'users/edit', locales: current_user
+    = render 'users/skype', user: @current_user
