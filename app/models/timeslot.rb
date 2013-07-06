@@ -25,5 +25,11 @@ class Timeslot < ActiveRecord::Base
     self.start_time.strftime("%I:%M %p")
   end
 
+  def requester_email
+    id = self.requester_id
+    requester = User.find(id).anonymous_check
+    requester
+  end
+
 
 end

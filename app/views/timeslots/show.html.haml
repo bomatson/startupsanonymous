@@ -6,5 +6,10 @@
     %h2.subheader
       Starts at
       = @timeslot.formatted_start_time
-    .button#timeslot
-      = link_to 'Book it!', timeslot_path(@timeslot, timeslot: {confirmed: :true, requester_id: current_user.id}), method: :put, confirm: "You are confirming at timeslot with this Listener"
+    - if @timeslot.confirmed
+      %h2.subheader
+        This timeslot has been booked with:
+        = @timeslot.requester_email  
+    - else
+      .button#timeslot
+        = link_to 'Book it!', timeslot_path(@timeslot, timeslot: {confirmed: :true, requester_id: current_user.id}), method: :put, confirm: "You are confirming at timeslot with this Listener"
