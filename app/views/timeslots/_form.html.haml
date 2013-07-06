@@ -1,13 +1,15 @@
 = form_for @timeslot, html: {class: 'custom editing'} do |f|
   .row
-    .large-6.columns
-      %h4 Please select a time you are available
-      %h2 Start Time
-      %div.datetime
-        = f.datetime_select(:start_time, default: DateTime.now, datetime_separator: "", time_separator: "", ampm: true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
+    .large-12.columns
+    %h3 Please select a time you are available
+    %h3.subheader Select a specific time range you can commit to talking with an entrepreneur in need. 
   .row
     .large-6.columns
-      %h2 End Time
+      %h3 Start Time
+      %div.datetime
+        = f.datetime_select(:start_time, default: DateTime.now, datetime_separator: "", time_separator: "", ampm: true, :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
+    .large-6.columns
+      %h3 End Time
       %div.datetime
         = f.datetime_select(:end_time, default: DateTime.now + 1.hour, ampm: true, datetime_separator: "", time_separator: "", :order => [:day, :month, :year, :hour, :minute], :minute_step => 15, html_options: {class: 'timeslot-date'})
   .row

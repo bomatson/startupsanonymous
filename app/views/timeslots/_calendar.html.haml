@@ -3,8 +3,8 @@
     = link_to "<", date: @date.prev_month
     = @date.strftime("%B %Y")
     = link_to ">", date: @date.next_month
-  = calendar do |date|
-    =date.day
+  = calendar @date do |date|
+    = date.day
     - if @timeslots_by_date[date]
       %ul
         -@timeslots_by_date[date].each do |timeslot|

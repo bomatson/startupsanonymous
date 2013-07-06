@@ -7,9 +7,10 @@
       = link_to "Please click here to edit your profile", edit_user_path
     - unless @user.timeslots.empty?
       %h4.subheader Your Schedule:
-      %ul
-        - @user.timeslots.each do |timeslot|
-          %li
-            = link_to timeslot.formatted_start_time, timeslot_path(timeslot)
-            = link_to 'X', timeslot_path(timeslot), :method => :delete
-            = "Booked" if timeslot.confirmed
+      .scheduling 
+        %ul
+          - @user.timeslots.each do |timeslot|
+            %li
+              = link_to timeslot.formatted_start_time, timeslot_path(timeslot)
+              = link_to 'X', timeslot_path(timeslot), :method => :delete
+              = "Booked" if timeslot.confirmed
