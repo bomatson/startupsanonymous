@@ -9,9 +9,12 @@ class Timeslot < ActiveRecord::Base
   scope :closest, available.where("start_time >= ?", DateTime.now)
   scope :past, where("start_time < ?", DateTime.now)
 
-  # after_initialize do
-  #   self.confirmed  ||= false
-  # end
+#check it for google cal
+#http://blog.baugues.com/google-calendar-api-oauth2-and-ruby-on-rails
+#check it for creating your own recourring events, try ice cube gem
+#http://www.youtube.com/watch?v=F6t-USuWPag
+#https://gist.github.com/nathancolgate/4998196
+#https://github.com/mzararagoza/rails-fullcalendar-icecube
 
   def self.group_by_date(scope = scoped)
     scope.closest.group_by {|i| i.start_time.to_date}
