@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def about
   end
 
-  def help
+  def listeners
   end
 
   def resources

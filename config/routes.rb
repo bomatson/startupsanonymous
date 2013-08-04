@@ -18,7 +18,7 @@ StartupsAnonymous::Application.routes.draw do
   resources :password_resets
 
 
-  match '/help', to: 'pages#help'
+  match '/listeners', to: 'pages#listeners'
   match '/about', to: 'pages#about'
   match '/resources', to: 'pages#resources'
   root to: 'pages#home'
