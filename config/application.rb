@@ -66,6 +66,6 @@ module StartupsAnonymous
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += %w[active_admin.css active_admin.js]
+    config.assets.precompile += %w[active_admin.css active_admin.js active_admin/print.css]
   end
 end
