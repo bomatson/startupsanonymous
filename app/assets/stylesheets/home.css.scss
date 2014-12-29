@@ -1,3 +1,5 @@
+$topbar-bg: #111;
+
 .notice {
     position:absolute;
 }
@@ -6,7 +8,47 @@
     margin-bottom:0;
 }
 
-.home{
+.hero {
+  background: url('hero.png') center no-repeat;
+  background-size: cover;
+  padding: 10rem 0;
+
+  .hero-text {
+    padding-top: 1rem;
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+.blue-container {
+  padding: 1rem;
+  background-color: #1a2432;
+
+  p, h1 {
+    color: white;
+  }
+}
+
+.coffee-container {
+  padding: 10rem 0;
+  background: url('coffee_container.jpg') center no-repeat;
+  background-size: cover;
+
+  h1 {
+    color: white;
+  }
+}
+
+.mission-container {
+  background-color: #e2e7ec;
+  padding: 1rem;
+}
+
+.cta-container {
+  padding: 1rem;
+}
+
+.home {
 
   .row {
     max-width: 100%;
