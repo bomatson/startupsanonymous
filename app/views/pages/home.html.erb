@@ -1,85 +1,83 @@
 <% provide(:title, 'Home') %>
 
-
-<section class="hero text-center">
-  <%= image_tag 'logo.png' %>
-  <div class='hero-text'>
-    startups anonymous
-  </div>
-</section>
-
-<section class="blue-container">
-  <div class='row'>
-    <div class='small-12 columns'>
-      <h1 class='text-center'>Startups Fail. All the time.</h1>
-      <p>
-      Some "wind down" and others crash, burning the last people
-      crazy enough to be on the rocket. We in the tech world, logically,
-      focus on the successes and the bets won. Geniuses. Closers. We are
-      here for the others (in this current moment, because it is a long
-      game after all), the negative space formed by Great Figures.
-      </p>
+<div class='homepage'>
+  <section class="hero text-center">
+    <%= image_tag 'logo.png' %>
+    <div class='hero-text'>
+      startups anonymous
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="coffee-container text-center">
-  <h1>Sometimes a coffee can mean the world.</h1>
-</section>
+  <section class="blue-container">
+    <div class='row'>
+      <div class='small-12 columns'>
+        <h1 class='text-center'>Startups Fail. All the time.</h1>
+        <p>
+        Some "wind down" and others crash, burning the last people
+        crazy enough to be on the rocket. We in the tech world, logically,
+        focus on the successes and the bets won. Geniuses. Closers. We are
+        here for the others (in this current moment, because it is a long
+        game after all), the negative space formed by Great Figures.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<section class="mission-container">
-  <div class='row'>
-    <div class='small-12 columns'>
-      <h1> Our Mission </h1>
-      <p>
+  <section class="coffee-container text-center">
+    <h1>Sometimes a coffee can mean the world.</h1>
+  </section>
+
+  <section class="mission-container">
+    <div class='row'>
+      <div class='small-12 columns'>
+        <h1 class='text-center'> Our Mission </h1>
+        <p>
         We are here to lend a non-judgmental ear or mind
         to anyone going through the hard times. We can of
         course lend our experience to help you out, and
         would love to see people climb out of the pit,
         but we are also there for the "I don't even know
         what to ask/say" moments.
-      </p>
-      <p>
+        </p>
+        <p>
         Most people will Fall. Sometimes, the Fall is so
         hard that people do not try again. We cannot change
         that, but we can try to make a small dent.
-      </p>
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-container">
-  <h1 class='text-center'>How to get in touch</h1>
-  <div class='row'>
-    <div class='small-12 columns'>
-      <%= image_tag('email.png') %>
-      <strong>Email us.</strong> If you use email below we will reply immediately.
+  <section class='cta-container text-center'>
+    <h1>How to get in touch</h1>
+    <div class='row'>
+      <div class='small-12 columns'>
+        <%= image_tag('email.png') %>
+        <b>Email us</b> and we will reply immediately.
+      </div>
+
+      <div class='small-12 columns'>
+        <%= image_tag('skypee.png') %>
+        <b>Call us</b> using Burnr or Skype by setting up a time below.
+      </div>
+
+      <div class='small-12 columns'>
+        <%= image_tag('coffee_cup.png') %>
+        <b>Let's grab coffee</b> if you live in the Los Angeles or Bay Area.
+      </div>
+
+      <div class='small-12 columns text-left'>
+        <small>
+          *Please note: It is a small world. We want people to be
+          as open as possible, so we recommend people know
+          <%= link_to "our real names", listeners_path %> to make sure
+          we are as open as possible. Anyone can contact us anonymously
+          or with their real name. We can also put you in touch with someone
+          else in case you prefer to not talk to Bobby or Diego.
+        </small>
+      </div>
     </div>
 
-    <div class='small-12 columns'>
-      <%= image_tag('skypee.png') %>
-      <strong>Burner or Skype.</strong> If you want to talk over phone,
-      please email us and we can arrange a call on Burner
-      or Skype to protect your anonymity.
-    </div>
-
-    <div class='small-12 columns'>
-      <%= image_tag('coffee_cup.png') %>
-      <strong>Coffee.</strong> If you live in the Los Angeles area,
-      and immediacy is not key, we will try to meet with anyone that
-      really needs it.
-    </div>
-    <div class='small-12 columns'>
-      <small>
-        *Please note: It is a small world. We want people to be
-        as open as possible, so we recommend people know
-        <%= link_to "our real names", listeners_path %> to make sure
-        we are as open as possible. Anyone can contact us anonymously
-        or with their real name. We can also put you in touch with someone
-        else in case you prefer to not talk to Bobby or Diego.
-      </small>
-    </div>
-  </div>
-
-  <%= render "/users/new" unless signed_in? %>
-</section>
+    <%= render "/users/new" unless signed_in? %>
+  </section>
+</div>
