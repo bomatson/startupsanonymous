@@ -1,4 +1,4 @@
-<nav class="top-bar">
+<nav class="top-bar" data-topbar role='navigation'>
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
@@ -34,14 +34,12 @@
       <li class="divider"></li>
       <li><a href="/listeners">Listeners</a></li>
       <li class="divider"></li>
-      <li><a href="/resources">Resources</a></li>
-      <li class="divider"></li>
       <li><a href="/about">About</a></li>
       <li class="divider"></li>
       <% if signed_in? %>
         <li class="divider"></li>
         <li><%= link_to "Logout", logout_path %></li>
-      <% else %> 
+      <% else %>
         <li class="divider"></li>
         <li><%= link_to "Log in!", login_path %></li>
       <% end %>
