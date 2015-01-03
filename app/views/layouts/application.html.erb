@@ -15,32 +15,32 @@
 
     <title><%= full_title(yield(:title))%></title>
 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
     <%= analytics_init if Rails.env.production? %>
   </head>
 
   <body>
     <%= render 'layouts/header' %>
+
     <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <% if flash[:error] %>
-            <div data-alert class="alert-box alert"><%= flash[:error] %><a href="#" class="close">&times;</a></div>
-          <% end %>
+      <% if flash[:error] %>
+        <div data-alert class="alert-box alert"><%= flash[:error] %><a href="#" class="close">&times;</a></div>
+      <% end %>
 
-          <%if flash[:notice] %>
-            <div data-alert class="alert-box"><%= flash[:notice] %><a href="#" class="close">&times;</a></div>
-          <% end %>
+      <%if flash[:notice] %>
+        <div data-alert class="alert-box"><%= flash[:notice] %><a href="#" class="close">&times;</a></div>
+      <% end %>
 
-          <%if flash[:alert] %>
-            <div data-alert class="alert-box success"><%= flash[:alert] %><a href="#" class="close">&times;</a></div>
-          <% end %>
-        </div>
-      </div>
-    <%= yield %>
+      <%if flash[:alert] %>
+        <div data-alert class="alert-box success"><%= flash[:alert] %><a href="#" class="close">&times;</a></div>
+      <% end %>
+
+      <%= yield %>
     </div>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>

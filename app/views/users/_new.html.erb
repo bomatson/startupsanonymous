@@ -1,32 +1,33 @@
+<section class='new-user'>
 
-<%= form_for(@user, url: user_path, html: {class: 'custom'}) do |f| %>
+<%= form_for(@user, url: user_path, html: {class: 'custom', id: 'contact'}) do |f| %>
   <div class="row">
-    <div class="large-12 columns" id="emailing">
-      <% if @user.errors.any? %>
-        <div class="error">
-          <h2>Invalid entry!</h2>
-          <ul>
-            <% for message in @user.errors.full_messages %>
+    <% if @user.errors.any? %>
+      <div class="error">
+        <h2>Invalid entry!</h2>
+        <ul>
+          <% for message in @user.errors.full_messages %>
             <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div class="large-10 columns">
-        <%= f.text_field :email, placeholder: "Enter your email here" %>
+          <% end %>
+        </ul>
       </div>
-      <div class="large-2 columns">
-        <%= f.check_box :anonymous %>
-        Anonymous
+    <% end %>
+    <div class="small-12 columns">
+      <%= f.text_field :email, placeholder: 'email address', class: 'user-input' %>
+    </div>
+    <div class="small-12 columns">
+      <div class="field">
+        <%= f.password_field :password, placeholder: 'password', class: 'user-input' %>
       </div>
-      <div class="large-10 columns">
-        <div class="field">
-        <%= f.password_field :password, placeholder: "Enter a password here" %>
-        </div>
-      </div>
-      <div class="large-2 columns">
-        <%= f.submit :Submit, class: "button prefix" %>
-      </div>
+    </div>
+    <div class="small-12 columns text-left">
+      <%= f.check_box :anonymous %>
+      <small>Please make me anonymous</small>
+    </div>
+    <div class="small-12 columns text-center">
+      <%= f.submit 'Sign up', class: 'cta-button' %>
     </div>
   </div>
 <% end %>
+
+</section>
