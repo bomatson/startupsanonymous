@@ -1,6 +1,6 @@
 <section class='new-user'>
 
-<%= form_for(@user, url: user_path, html: {class: 'custom'}) do |f| %>
+<%= form_for(@user, url: user_path, html: {class: 'custom', id: 'contact'}) do |f| %>
   <div class="row">
     <% if @user.errors.any? %>
       <div class="error">

@@ -48,7 +48,20 @@
   }
 
   .cta-container {
-    padding: 1rem;
+    padding: 3rem 1rem 5rem;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .contact-detail {
+      padding: 1rem;
+    }
+
+    .disclaimer {
+      line-height: 1;
+      margin-bottom: 3rem;
+    }
   }
 
   @media only screen and (min-width: 40.063em) {
